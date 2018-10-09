@@ -1,0 +1,6 @@
+﻿CLIs to add:             |
+
+position=(top|topleft|etc)
+securedesktop
+killexistinginstances
+top

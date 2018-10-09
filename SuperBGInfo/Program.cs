@@ -11,12 +11,23 @@ namespace SuperBGInfo
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
+        public static string[] Arguments = null;
+
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DisplayForm());
+            Arguments = args;
+            if (args.Length > 0 && args[0] == "securedesktop")
+            {
+                BelowAverage.SecureDesktop.StartProcess(Application.ExecutablePath + " top");
+            }
+            else
+            {
+                Application.Run(new DisplayForm());
+            }
         }
     }
 }

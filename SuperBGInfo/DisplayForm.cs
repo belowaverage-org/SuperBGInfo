@@ -28,6 +28,14 @@ namespace SuperBGInfo
         public DisplayForm()
         {
             InitializeComponent();
+            foreach(string arg in Program.Arguments)
+            {
+                if(arg == "top")
+                {
+                    TopMost = true;
+                    continue;
+                }
+            }
         }
 
         private void DisplayForm_Load(object sender, EventArgs e)
