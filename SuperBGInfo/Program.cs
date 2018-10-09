@@ -16,7 +16,7 @@ namespace SuperBGInfo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            BelowAverage.SecureDesktop.StartProcess(@"C:\Windows\System32\cmd.exe");
         }
     }
 }
