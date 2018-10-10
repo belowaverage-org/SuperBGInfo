@@ -25,23 +25,33 @@ namespace SuperBGInfo
         [DllImport("user32.dll")]
         static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
+        public Timer topTimer = new Timer();
+
+        public int originalStyle = 0;
+
         public DisplayForm()
         {
             InitializeComponent();
-            foreach(string arg in Program.Arguments)
-            {
-                if(arg == "top")
-                {
-                    TopMost = true;
-                    continue;
-                }
-            }
         }
 
         private void DisplayForm_Load(object sender, EventArgs e)
         {
-            var style = GetWindowLong(Handle, GWL_EXSTYLE);
-            SetWindowLong(Handle, GWL_EXSTYLE, style | WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW);
+            originalStyle = GetWindowLong(Handle, GWL_EXSTYLE);
+            originalStyle = originalStyle | WS_EX_LAYERED | WS_EX_TRANSPARENT;
+            SetWindowLong(Handle, GWL_EXSTYLE, originalStyle | WS_EX_TOOLWINDOW);
+            foreach (string arg in Program.Arguments)
+            {
+                if (arg == "top")
+                {
+                    TopMost = true;
+                    continue;
+                }
+                if (arg == "showform")
+                {
+                    SetWindowLong(Handle, GWL_EXSTYLE, originalStyle);
+                    continue;
+                }
+            }
         }
-    }    
+    }
 }

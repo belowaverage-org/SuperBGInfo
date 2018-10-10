@@ -2,5 +2,7 @@
 
 position=(top|topleft|etc)
 securedesktop
-killexistinginstances
 top
+showform
+
+Make it run at all times.

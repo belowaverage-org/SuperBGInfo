@@ -65,7 +65,6 @@
             this.Load += new System.EventHandler(this.DisplayForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

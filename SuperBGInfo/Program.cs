@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,12 +18,14 @@ namespace SuperBGInfo
         [STAThread]
         static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
             Arguments = args;
             if (args.Length > 0 && args[0] == "securedesktop")
             {
-                BelowAverage.SecureDesktop.StartProcess(Application.ExecutablePath + " top");
+                Process sDesktopProcess = BelowAverage.SecureDesktop.StartProcess(Application.ExecutablePath + " top");
+                ChildProcessTracker.AddProcess(sDesktopProcess);
+                sDesktopProcess.WaitForExit();
             }
             else
             {
