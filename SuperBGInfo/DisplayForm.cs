@@ -52,6 +52,16 @@ namespace SuperBGInfo
                     continue;
                 }
             }
+            if(TopMost)
+            {
+                topTimer.Interval = 1000;
+                topTimer.Tick += TopTimer_Tick;
+                topTimer.Start();
+            }
+        }
+        private void TopTimer_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

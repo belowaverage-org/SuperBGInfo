@@ -29,8 +29,8 @@ namespace SuperBGInfo
             }
             else
             {
-                //Application.Run(new DisplayForm());
-                Application.Run(new BuildForm());
+                Application.Run(new DisplayForm());
+                //Application.Run(new BuildForm());
             }
         }
     }
