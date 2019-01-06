@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildForm.Designer.cs">
+      <DependentUpon>BuildForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisplayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,9 @@
     <Compile Include="SecureDesktop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BuildForm.resx">
+      <DependentUpon>BuildForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DisplayForm.resx">
       <DependentUpon>DisplayForm.cs</DependentUpon>
     </EmbeddedResource>
