@@ -15,6 +15,7 @@ namespace SuperBGInfo
         public BuildForm()
         {
             InitializeComponent();
+            Icon = Properties.Resources.sbgi;
         }
 
         private void fontBtn_Click(object sender, EventArgs e)
