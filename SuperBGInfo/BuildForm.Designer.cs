@@ -34,32 +34,38 @@
             this.saveBtn = new System.Windows.Forms.Button();
             this.fontBtn = new System.Windows.Forms.Button();
             this.fontDialog = new System.Windows.Forms.FontDialog();
+            this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.buttonLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
+            this.splitContainer.Panel1.SuspendLayout();
+            this.splitContainer.Panel2.SuspendLayout();
+            this.splitContainer.SuspendLayout();
+            this.buttonLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // editorRTB
             // 
-            this.editorRTB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.editorRTB.BackColor = System.Drawing.Color.Black;
             this.editorRTB.DetectUrls = false;
+            this.editorRTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editorRTB.ForeColor = System.Drawing.Color.White;
             this.editorRTB.Location = new System.Drawing.Point(0, 0);
             this.editorRTB.Margin = new System.Windows.Forms.Padding(0);
             this.editorRTB.Name = "editorRTB";
             this.editorRTB.ShowSelectionMargin = true;
-            this.editorRTB.Size = new System.Drawing.Size(581, 450);
+            this.editorRTB.Size = new System.Drawing.Size(331, 308);
             this.editorRTB.TabIndex = 0;
             this.editorRTB.Text = "";
+            this.editorRTB.WordWrap = false;
             // 
             // varList
             // 
-            this.varList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.varList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.varList.FormattingEnabled = true;
             this.varList.HorizontalScrollbar = true;
             this.varList.IntegralHeight = false;
-            this.varList.ItemHeight = 16;
             this.varList.Items.AddRange(new object[] {
             "<BIOSMode>",
             "<BIOSVersion>",
@@ -96,42 +102,46 @@
             "<WindowsInstallDate>",
             "<WindowsMajorVersion>",
             "<WindowsMinorVersion>"});
-            this.varList.Location = new System.Drawing.Point(584, 33);
+            this.varList.Location = new System.Drawing.Point(0, 35);
+            this.varList.Margin = new System.Windows.Forms.Padding(2);
             this.varList.Name = "varList";
-            this.varList.Size = new System.Drawing.Size(245, 417);
+            this.varList.Size = new System.Drawing.Size(190, 273);
             this.varList.Sorted = true;
             this.varList.TabIndex = 1;
             this.varList.DoubleClick += new System.EventHandler(this.varList_DoubleClick);
             // 
             // prevBtn
             // 
-            this.prevBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.prevBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prevBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.prevBtn.Location = new System.Drawing.Point(665, 0);
+            this.prevBtn.Location = new System.Drawing.Point(63, 3);
+            this.prevBtn.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.prevBtn.Name = "prevBtn";
-            this.prevBtn.Size = new System.Drawing.Size(80, 31);
+            this.prevBtn.Size = new System.Drawing.Size(60, 29);
             this.prevBtn.TabIndex = 2;
             this.prevBtn.Text = "Preview";
             this.prevBtn.UseVisualStyleBackColor = false;
             // 
             // saveBtn
             // 
-            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.saveBtn.Location = new System.Drawing.Point(746, 0);
+            this.saveBtn.Location = new System.Drawing.Point(126, 3);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(80, 31);
+            this.saveBtn.Size = new System.Drawing.Size(61, 29);
             this.saveBtn.TabIndex = 3;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
             // 
             // fontBtn
             // 
-            this.fontBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fontBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fontBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.fontBtn.Location = new System.Drawing.Point(584, 0);
+            this.fontBtn.Location = new System.Drawing.Point(0, 3);
+            this.fontBtn.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.fontBtn.Name = "fontBtn";
-            this.fontBtn.Size = new System.Drawing.Size(80, 31);
+            this.fontBtn.Size = new System.Drawing.Size(60, 29);
             this.fontBtn.TabIndex = 4;
             this.fontBtn.Text = "Font";
             this.fontBtn.UseVisualStyleBackColor = false;
@@ -145,19 +155,57 @@
             this.fontDialog.FontMustExist = true;
             this.fontDialog.ShowColor = true;
             // 
+            // splitContainer
+            // 
+            this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer.Name = "splitContainer";
+            // 
+            // splitContainer.Panel1
+            // 
+            this.splitContainer.Panel1.Controls.Add(this.editorRTB);
+            // 
+            // splitContainer.Panel2
+            // 
+            this.splitContainer.Panel2.Controls.Add(this.buttonLayoutPanel);
+            this.splitContainer.Panel2.Controls.Add(this.varList);
+            this.splitContainer.Size = new System.Drawing.Size(525, 308);
+            this.splitContainer.SplitterDistance = 331;
+            this.splitContainer.TabIndex = 6;
+            // 
+            // buttonLayoutPanel
+            // 
+            this.buttonLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLayoutPanel.ColumnCount = 3;
+            this.buttonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.buttonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.buttonLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.buttonLayoutPanel.Controls.Add(this.fontBtn, 0, 0);
+            this.buttonLayoutPanel.Controls.Add(this.saveBtn, 2, 0);
+            this.buttonLayoutPanel.Controls.Add(this.prevBtn, 1, 0);
+            this.buttonLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.buttonLayoutPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonLayoutPanel.Name = "buttonLayoutPanel";
+            this.buttonLayoutPanel.RowCount = 1;
+            this.buttonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.buttonLayoutPanel.Size = new System.Drawing.Size(190, 35);
+            this.buttonLayoutPanel.TabIndex = 2;
+            // 
             // BuildForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(829, 450);
-            this.Controls.Add(this.fontBtn);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.prevBtn);
-            this.Controls.Add(this.varList);
-            this.Controls.Add(this.editorRTB);
+            this.ClientSize = new System.Drawing.Size(525, 308);
+            this.Controls.Add(this.splitContainer);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BuildForm";
             this.Text = "SuperBGInfo";
+            this.splitContainer.Panel1.ResumeLayout(false);
+            this.splitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
+            this.splitContainer.ResumeLayout(false);
+            this.buttonLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -170,5 +218,7 @@
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button fontBtn;
         private System.Windows.Forms.FontDialog fontDialog;
+        private System.Windows.Forms.SplitContainer splitContainer;
+        private System.Windows.Forms.TableLayoutPanel buttonLayoutPanel;
     }
 }
