@@ -53,7 +53,7 @@
             this.editorRTB.Margin = new System.Windows.Forms.Padding(0);
             this.editorRTB.Name = "editorRTB";
             this.editorRTB.ShowSelectionMargin = true;
-            this.editorRTB.Size = new System.Drawing.Size(331, 308);
+            this.editorRTB.Size = new System.Drawing.Size(345, 308);
             this.editorRTB.TabIndex = 0;
             this.editorRTB.Text = "";
             this.editorRTB.WordWrap = false;
@@ -105,7 +105,7 @@
             this.varList.Location = new System.Drawing.Point(0, 35);
             this.varList.Margin = new System.Windows.Forms.Padding(2);
             this.varList.Name = "varList";
-            this.varList.Size = new System.Drawing.Size(190, 273);
+            this.varList.Size = new System.Drawing.Size(177, 273);
             this.varList.Sorted = true;
             this.varList.TabIndex = 1;
             this.varList.DoubleClick += new System.EventHandler(this.varList_DoubleClick);
@@ -114,10 +114,10 @@
             // 
             this.prevBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.prevBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.prevBtn.Location = new System.Drawing.Point(63, 3);
+            this.prevBtn.Location = new System.Drawing.Point(59, 3);
             this.prevBtn.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.prevBtn.Name = "prevBtn";
-            this.prevBtn.Size = new System.Drawing.Size(60, 29);
+            this.prevBtn.Size = new System.Drawing.Size(56, 29);
             this.prevBtn.TabIndex = 2;
             this.prevBtn.Text = "Preview";
             this.prevBtn.UseVisualStyleBackColor = false;
@@ -126,10 +126,10 @@
             // 
             this.saveBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.saveBtn.Location = new System.Drawing.Point(126, 3);
+            this.saveBtn.Location = new System.Drawing.Point(118, 3);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(61, 29);
+            this.saveBtn.Size = new System.Drawing.Size(56, 29);
             this.saveBtn.TabIndex = 3;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@
             this.fontBtn.Location = new System.Drawing.Point(0, 3);
             this.fontBtn.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.fontBtn.Name = "fontBtn";
-            this.fontBtn.Size = new System.Drawing.Size(60, 29);
+            this.fontBtn.Size = new System.Drawing.Size(56, 29);
             this.fontBtn.TabIndex = 4;
             this.fontBtn.Text = "Font";
             this.fontBtn.UseVisualStyleBackColor = false;
@@ -158,19 +158,23 @@
             // splitContainer
             // 
             this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer.Location = new System.Drawing.Point(0, 0);
             this.splitContainer.Name = "splitContainer";
             // 
             // splitContainer.Panel1
             // 
             this.splitContainer.Panel1.Controls.Add(this.editorRTB);
+            this.splitContainer.Panel1MinSize = 100;
             // 
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.buttonLayoutPanel);
             this.splitContainer.Panel2.Controls.Add(this.varList);
+            this.splitContainer.Panel2MinSize = 150;
             this.splitContainer.Size = new System.Drawing.Size(525, 308);
-            this.splitContainer.SplitterDistance = 331;
+            this.splitContainer.SplitterDistance = 345;
+            this.splitContainer.SplitterWidth = 3;
             this.splitContainer.TabIndex = 6;
             // 
             // buttonLayoutPanel
@@ -189,7 +193,7 @@
             this.buttonLayoutPanel.Name = "buttonLayoutPanel";
             this.buttonLayoutPanel.RowCount = 1;
             this.buttonLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.buttonLayoutPanel.Size = new System.Drawing.Size(190, 35);
+            this.buttonLayoutPanel.Size = new System.Drawing.Size(177, 35);
             this.buttonLayoutPanel.TabIndex = 2;
             // 
             // BuildForm
