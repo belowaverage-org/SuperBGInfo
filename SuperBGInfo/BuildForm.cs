@@ -12,6 +12,7 @@ namespace SuperBGInfo
 {
     public partial class BuildForm : Form
     {
+        private Form displayForm = new DisplayForm();
         public BuildForm()
         {
             InitializeComponent();
@@ -31,6 +32,18 @@ namespace SuperBGInfo
             //editorRTB.SelectionLength;
             //varList.
             editorRTB.SelectedText = varList.SelectedItem.ToString();
+        }
+
+        private void PrevBtn_Click(object sender, EventArgs e)
+        {
+            displayForm.Show();
+            displayForm.BringToFront();
+        }
+
+        private void LayoutConfigButton_Click(object sender, EventArgs e)
+        {
+            Form configForm = new ConfigForm();
+            configForm.ShowDialog();
         }
     }
 }

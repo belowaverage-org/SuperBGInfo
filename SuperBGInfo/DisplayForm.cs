@@ -58,6 +58,7 @@ namespace SuperBGInfo
                 topTimer.Tick += TopTimer_Tick;
                 topTimer.Start();
             }
+            
         }
         private void TopTimer_Tick(object sender, EventArgs e)
         {

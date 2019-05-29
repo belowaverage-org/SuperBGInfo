@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.DisplayText = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // DisplayText
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SuperBGInfo Proof of Concept!";
+            this.DisplayText.BackColor = System.Drawing.Color.Black;
+            this.DisplayText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DisplayText.DetectUrls = false;
+            this.DisplayText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DisplayText.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DisplayText.ForeColor = System.Drawing.Color.White;
+            this.DisplayText.Location = new System.Drawing.Point(0, 0);
+            this.DisplayText.Name = "DisplayText";
+            this.DisplayText.ReadOnly = true;
+            this.DisplayText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.DisplayText.Size = new System.Drawing.Size(818, 392);
+            this.DisplayText.TabIndex = 0;
+            this.DisplayText.Text = "Test123";
             // 
             // DisplayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(0, 0);
+            this.ClientSize = new System.Drawing.Size(818, 392);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DisplayText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -64,12 +68,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DisplayForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
+
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox DisplayText;
     }
 }
 
