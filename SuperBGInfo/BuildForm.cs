@@ -12,7 +12,7 @@ namespace SuperBGInfo
 {
     public partial class BuildForm : Form
     {
-        private Form displayForm = new DisplayForm();
+        private DisplayForm displayForm = new DisplayForm();
         public BuildForm()
         {
             InitializeComponent();
@@ -36,6 +36,7 @@ namespace SuperBGInfo
 
         private void PrevBtn_Click(object sender, EventArgs e)
         {
+            displayForm.TemplateRtf = editorRTB.Rtf;
             displayForm.Show();
             displayForm.BringToFront();
         }

@@ -64,7 +64,6 @@
             this.radRight.Name = "radRight";
             this.radRight.Size = new System.Drawing.Size(20, 18);
             this.radRight.TabIndex = 23;
-            this.radRight.TabStop = true;
             this.radRight.UseVisualStyleBackColor = false;
             // 
             // radCenter2
@@ -75,11 +74,11 @@
             this.radCenter2.Name = "radCenter2";
             this.radCenter2.Size = new System.Drawing.Size(20, 18);
             this.radCenter2.TabIndex = 22;
-            this.radCenter2.TabStop = true;
             this.radCenter2.UseVisualStyleBackColor = false;
             // 
             // radLeft
             // 
+            this.radLeft.Checked = true;
             this.radLeft.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radLeft.Location = new System.Drawing.Point(48, 0);
             this.radLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -97,7 +96,6 @@
             this.radCenter.Name = "radCenter";
             this.radCenter.Size = new System.Drawing.Size(20, 18);
             this.radCenter.TabIndex = 20;
-            this.radCenter.TabStop = true;
             this.radCenter.UseVisualStyleBackColor = false;
             // 
             // radBottomRight
@@ -108,7 +106,6 @@
             this.radBottomRight.Name = "radBottomRight";
             this.radBottomRight.Size = new System.Drawing.Size(20, 18);
             this.radBottomRight.TabIndex = 19;
-            this.radBottomRight.TabStop = true;
             this.radBottomRight.UseVisualStyleBackColor = false;
             // 
             // radBottomLeft
@@ -119,7 +116,6 @@
             this.radBottomLeft.Name = "radBottomLeft";
             this.radBottomLeft.Size = new System.Drawing.Size(20, 18);
             this.radBottomLeft.TabIndex = 18;
-            this.radBottomLeft.TabStop = true;
             this.radBottomLeft.UseVisualStyleBackColor = false;
             // 
             // radTopRight
@@ -130,11 +126,11 @@
             this.radTopRight.Name = "radTopRight";
             this.radTopRight.Size = new System.Drawing.Size(20, 18);
             this.radTopRight.TabIndex = 17;
-            this.radTopRight.TabStop = true;
             this.radTopRight.UseVisualStyleBackColor = false;
             // 
             // radTopLeft
             // 
+            this.radTopLeft.Checked = true;
             this.radTopLeft.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radTopLeft.Location = new System.Drawing.Point(56, 51);
             this.radTopLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

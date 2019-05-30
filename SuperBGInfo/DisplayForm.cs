@@ -29,9 +29,66 @@ namespace SuperBGInfo
 
         public int originalStyle = 0;
 
+        private string templateRtf = "";
+        public string TemplateRtf
+        {
+            get
+            {
+                return templateRtf;
+            }
+            set
+            {
+                templateRtf = value;
+                DisplayRedraw();
+            }
+        }
+
         public DisplayForm()
         {
             InitializeComponent();
+        }
+
+        public void DisplayRedraw()
+        {
+            string rtf = TemplateRtf;
+            string[] variables = ReadVariables(rtf);
+
+            foreach(string variable in variables)
+            {
+                if(variable == "UserName")
+                {
+                    rtf = rtf.Replace("<UserName>", Environment.UserName);
+                }
+            }
+
+            DisplayText.Rtf = rtf;
+        }
+
+        private string[] ReadVariables(string str)
+        {
+            List<string> variables = new List<string>();
+            bool read = false;
+            string buffer = "";
+            foreach (char character in str)
+            {
+                if (character == '<')
+                {
+                    read = true;
+                    continue;
+                }
+                if (character == '>')
+                {
+                    variables.Add(buffer);
+                    buffer = "";
+                    read = false;
+                    continue;
+                }
+                if (read)
+                {
+                    buffer += character;
+                }
+            }
+            return variables.ToArray();
         }
 
         private void DisplayForm_Load(object sender, EventArgs e)
